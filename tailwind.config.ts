@@ -8,11 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      boxShadow: {
+        "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
+      screens: {
+        xs: "550px",
+      },
+      scale: {
+        "115": "1.15",
       },
     },
+  },
+  fontFamily: {
+    sora: ["Sora", "sans-serif"],
   },
   plugins: [],
 };
