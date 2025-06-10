@@ -59,12 +59,12 @@ const Contact: React.FC = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.h3
-        className="text-3xl block w-full text-center pb-10 pt-6"
+        className="text-3xl block w-full text-center pb-10 pt-6 text-gray-800 font-bold"
         variants={itemVariants}
       >
         Contact Me
       </motion.h3>
-      <motion.h4 className="text-sm p-4" variants={itemVariants}>
+      <motion.h4 className="text-sm p-4 text-gray-600" variants={itemVariants}>
         Feel free to contact me directly through this form
       </motion.h4>
       <div className="w-full flex justify-center">
@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
             type="text"
             name="name"
             placeholder="Your Name"
-            className="my-4 w-full rounded-md p-2 focus:outline-none bg-transparent shadow-sm border border-black/30 transition-all duration-200 focus:border-black/50 focus:shadow-md"
+            className="my-4 w-full rounded-xl p-3 focus:outline-none bg-white/80 backdrop-blur-sm shadow-md border border-slate-200 transition-all duration-200 focus:border-blue-400 focus:shadow-lg focus:ring-2 focus:ring-blue-100 placeholder-gray-500 text-gray-700"
             variants={inputVariants}
             whileFocus={{ scale: 1.02 }}
           />
@@ -86,26 +86,26 @@ const Contact: React.FC = () => {
             type="email"
             name="email"
             placeholder="Your Email"
-            className="my-4 w-full rounded-md p-2 focus:outline-none bg-transparent shadow-sm border border-black/30 transition-all duration-200 focus:border-black/50 focus:shadow-md"
+            className="my-4 w-full rounded-xl p-3 focus:outline-none bg-white/80 backdrop-blur-sm shadow-md border border-slate-200 transition-all duration-200 focus:border-blue-400 focus:shadow-lg focus:ring-2 focus:ring-blue-100 placeholder-gray-500 text-gray-700"
             variants={inputVariants}
             whileFocus={{ scale: 1.02 }}
           />
           <motion.textarea
             name="message"
             placeholder="Your Message"
-            className="my-4 w-full min-h-32 rounded-md p-2 focus:outline-none bg-transparent shadow-sm border border-black/30 transition-all duration-200 focus:border-black/50 focus:shadow-md"
+            className="my-4 w-full min-h-32 rounded-xl p-3 focus:outline-none bg-white/80 backdrop-blur-sm shadow-md border border-slate-200 transition-all duration-200 focus:border-blue-400 focus:shadow-lg focus:ring-2 focus:ring-blue-100 placeholder-gray-500 text-gray-700 resize-none"
             variants={inputVariants}
             whileFocus={{ scale: 1.02 }}
           />
           <motion.button
             type="submit"
-            className="flex py-2 px-4 m-2 text-black/60 rounded-full text-black transition-all duration-200 shadow-sm border border-black/30 hover:shadow-md"
+            className="flex py-3 px-6 m-2 text-white rounded-xl transition-all duration-200 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg hover:shadow-xl font-medium"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
           >
-            Send
-            <Send size={20} className="px-1" />
+            Send Message
+            <Send size={20} className="ml-2" />
           </motion.button>
         </motion.form>
       </div>

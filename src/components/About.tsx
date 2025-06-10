@@ -42,7 +42,7 @@ const About: React.FC = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.h3
-        className="text-3xl block w-full text-center pb-10 pt-6"
+        className="text-3xl block w-full text-center pb-10 pt-6 text-gray-800 font-bold"
         variants={itemVariants}
       >
         About Me
@@ -52,24 +52,25 @@ const About: React.FC = () => {
           className="flex-1 m-4 hidden md:block md:m-10"
           variants={itemVariants}
         >
-          <p className="mb-6">
+          <p className="mb-6 text-gray-600 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <p>
+          <p className="text-gray-600 leading-relaxed">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
         </motion.div>
-        <motion.div variants={imageVariants}>
+        <motion.div variants={imageVariants} className="relative">
+          <div className="absolute inset-0 bg-slate-100/60 backdrop-blur-sm rounded-full border border-slate-200"></div>
           <Image
             src="/home-page.png"
             alt="Me"
-            className="object-cover m-4"
+            className="object-cover m-4 rounded-full relative z-10"
             width={250}
             height={250}
           />
@@ -78,13 +79,13 @@ const About: React.FC = () => {
           className="flex-1 m-4 block  md:hidden"
           variants={itemVariants}
         >
-          <p className="mb-6">
+          <p className="mb-6 text-gray-600 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <p>
+          <p className="text-gray-600 leading-relaxed">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit

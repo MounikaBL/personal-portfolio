@@ -44,35 +44,42 @@ const Home: React.FC = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.div className="text-[14px] font-medium" variants={itemVariants}>
+        <motion.div
+          className="text-[14px] font-medium text-indigo-600"
+          variants={itemVariants}
+        >
           Hello! It&apos;s me
         </motion.div>
         <div className="hidden sm:flex sm:flex-col text-left leading-loose ">
           <div className="typewriter__container font-bold w-fit">
-            <div className="typewriter one text-5xl">Mounika Badadh</div>
+            <div className="typewriter one text-5xl text-gray-800 font-bold">
+              Mounika Badadh
+            </div>
           </div>
           <div className="typewriter__container w-fit">
-            <div className="typewriter two text-2xl">
+            <div className="typewriter two text-2xl text-blue-700">
               I&apos;m a Frontend Developer
             </div>
           </div>
           <div className="typewriter__container w-fit">
-            <div className="typewriter three">
+            <div className="typewriter three text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
           </div>
         </div>
         <div className="flex flex-col text-left leading-loose sm:hidden">
           <div className="typewriter__container font-bold w-fit">
-            <div className="typewriter one text-3xl sm:text-5xl">Mounika</div>
+            <div className="typewriter one text-3xl sm:text-5xl text-gray-800 font-bold">
+              Mounika
+            </div>
           </div>
           <div className="typewriter__container w-fit">
-            <div className="typewriter two text-xl sm:text-2xl">
+            <div className="typewriter two text-xl sm:text-2xl text-blue-700">
               Frontend Developer
             </div>
           </div>
           <div className="typewriter__container w-fit">
-            <div className="typewriter three text-sm sm:text-base">
+            <div className="typewriter three text-sm sm:text-base text-gray-600">
               Lorem ipsum dolor sit amet
             </div>
           </div>
@@ -82,18 +89,18 @@ const Home: React.FC = () => {
           variants={itemVariants}
         >
           <motion.button
-            className="h-[45px] py-2 px-4 mr-2 rounded-full shadow-md border border-[#0000000d] transition-all duration-200"
+            className="h-[45px] py-2 px-4 mr-2 rounded-xl transition-all duration-200 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg hover:shadow-xl text-white"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
           >
             <NextLink href={`#contact`} className="flex">
-              <span className="text-base">Connect </span>
+              <span className="text-base font-medium">Connect </span>
               <Mail className="ml-2" />
             </NextLink>
           </motion.button>
           <motion.div
-            className="flex justify-center cursor-pointer items-center m-2 w-[45px] h-[45px] rounded-full shadow-md border border-[#0000000d] transition-all duration-200"
+            className="flex justify-center cursor-pointer items-center m-2 w-[45px] h-[45px] rounded-xl transition-all duration-200 bg-gradient-to-r from-blue-100 to-indigo-100 hover:from-blue-200 hover:to-indigo-200 shadow-md border border-blue-200 hover:shadow-lg"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
@@ -105,10 +112,10 @@ const Home: React.FC = () => {
               );
             }}
           >
-            <Linkedin />
+            <Linkedin className="text-blue-700" />
           </motion.div>
           <motion.div
-            className="flex justify-center cursor-pointer items-center m-2 w-[45px] h-[45px] rounded-full shadow-md border border-[#0000000d] transition-all duration-200"
+            className="flex justify-center cursor-pointer items-center m-2 w-[45px] h-[45px] rounded-xl transition-all duration-200 bg-gradient-to-r from-gray-100 to-slate-100 hover:from-gray-200 hover:to-slate-200 shadow-md border border-gray-200 hover:shadow-lg"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
@@ -120,7 +127,7 @@ const Home: React.FC = () => {
               );
             }}
           >
-            <Github />
+            <Github className="text-gray-700" />
           </motion.div>
         </motion.div>
       </motion.div>

@@ -42,6 +42,19 @@ const Skills: React.FC = () => {
     },
   };
 
+  // Color variants for skill tags
+  const getSkillColor = (index: number) => {
+    const colors = [
+      "bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 border-blue-300 hover:from-blue-200 hover:to-blue-300",
+      "bg-gradient-to-r from-green-100 to-emerald-200 text-emerald-800 border-emerald-300 hover:from-green-200 hover:to-emerald-300",
+      "bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800 border-purple-300 hover:from-purple-200 hover:to-purple-300",
+      "bg-gradient-to-r from-pink-100 to-rose-200 text-rose-800 border-rose-300 hover:from-pink-200 hover:to-rose-300",
+      "bg-gradient-to-r from-yellow-100 to-amber-200 text-amber-800 border-amber-300 hover:from-yellow-200 hover:to-amber-300",
+      "bg-gradient-to-r from-indigo-100 to-indigo-200 text-indigo-800 border-indigo-300 hover:from-indigo-200 hover:to-indigo-300",
+    ];
+    return colors[index % colors.length];
+  };
+
   return (
     <motion.div
       id="skills"
@@ -51,7 +64,7 @@ const Skills: React.FC = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.h3
-        className="text-3xl block w-full text-center pb-10 pt-6"
+        className="text-3xl block w-full text-center pb-10 pt-6 text-gray-800 font-bold"
         variants={titleVariants}
       >
         My Skills
@@ -72,7 +85,11 @@ const Skills: React.FC = () => {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <motion.h5 className="text-sm text-black/60 font-regular p-2 rounded-full shadow-md border border-black/30 cursor-default">
+            <motion.h5
+              className={`text-sm font-medium p-3 rounded-xl backdrop-blur-sm shadow-md border cursor-default transition-all duration-200 ${getSkillColor(
+                index
+              )}`}
+            >
               {skill}
             </motion.h5>
           </motion.div>
