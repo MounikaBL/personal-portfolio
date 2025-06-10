@@ -10,18 +10,41 @@ body {
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   box-sizing: border-box;
-  background: linear-gradient(-45deg, #f8fafc, #e0f2fe, #ecfdf5, #fef3c7, #fce7f3, #f3e8ff);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
+  background: linear-gradient(-45deg, #f1f5f9, #dbeafe, #d1fae5, #fef3c7, #fce7f3, #e0e7ff, #f0fdfa);
+  background-size: 300% 300%;
+  animation: gradient 25s ease infinite;
   min-height: 100vh;
+  position: relative;
+}
+
+// Add a subtle mesh pattern overlay
+html::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
-  50% {
+  25% {
     background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
   }
   100% {
     background-position: 0% 50%;
@@ -41,8 +64,8 @@ body {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(240, 240, 255, 0.2) 0%, transparent 50%);
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(240, 240, 255, 0.15) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -60,7 +83,7 @@ body {
 
 .shape {
   position: absolute;
-  opacity: 0.08; /* Slightly more visible */
+  opacity: 0.06; /* Slightly more visible */
 }
 
 .main {
@@ -175,10 +198,10 @@ nav {
     transform: translateY(0px) rotate(0deg);
   }
   33% {
-    transform: translateY(-20px) rotate(120deg);
+    transform: translateY(-30px) rotate(120deg);
   }
   66% {
-    transform: translateY(10px) rotate(240deg);
+    transform: translateY(15px) rotate(240deg);
   }
 }
 
@@ -193,47 +216,47 @@ nav {
   
   .shape {
     position: absolute;
-    opacity: 0.08;
-    animation: float 8s ease-in-out infinite;
+    opacity: 0.06;
+    animation: float 12s ease-in-out infinite;
     
     &:nth-child(1) {
       top: 10%;
       left: 10%;
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(45deg, #dbeafe, #bfdbfe);
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(45deg, #3b82f6, #6366f1);
       border-radius: 50%;
       animation-delay: 0s;
     }
     
     &:nth-child(2) {
-      top: 20%;
-      right: 10%;
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(45deg, #dcfce7, #bbf7d0);
+      top: 70%;
+      right: 15%;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #10b981, #059669);
       border-radius: 50%;
-      animation-delay: 2s;
+      animation-delay: 3s;
     }
     
     &:nth-child(3) {
-      bottom: 30%;
-      left: 20%;
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(45deg, #fef3c7, #fde68a);
+      bottom: 20%;
+      left: 15%;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #f59e0b, #d97706);
       border-radius: 50%;
-      animation-delay: 4s;
+      animation-delay: 6s;
     }
     
     &:nth-child(4) {
-      bottom: 10%;
-      right: 20%;
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(45deg, #fce7f3, #fbcfe8);
+      top: 30%;
+      right: 25%;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(45deg, #ec4899, #be185d);
       border-radius: 50%;
-      animation-delay: 1s;
+      animation-delay: 9s;
     }
   }
 }
